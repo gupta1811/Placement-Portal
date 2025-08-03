@@ -10,7 +10,7 @@ export const companies = [
     positions: ["Software Engineer", "Product Manager", "Data Scientist"],
     requirements: {
       cgpa: 8.0,
-      branches: ["CSE", "IT", "ENC"],
+      branches: ["CSE", "IT", "ENC","BTD"],
       skills: ["Programming", "Problem Solving", "System Design"]
     },
     applicationDeadline: "2024-09-10",

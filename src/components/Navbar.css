@@ -1,0 +1,115 @@
+.navbar {
+  background: transparent;
+  width: 100vw;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border: none;
+}
+
+.nav-container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 8px 28px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(90deg, #43cea2 0%, #185a9d 100%);
+  border-radius: 16px;
+  box-shadow: 0 2px 24px rgba(80,120,180,0.09);
+}
+
+.nav-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.brand-link {
+  color: #fff;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: color 0.3s;
+}
+
+.brand-link:hover {
+  color: #f7d6e0;
+  text-shadow: 0 1px 8px rgba(90,210,159,0.12);
+}
+
+.nav-menu {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-link {
+  color: #fff;
+  text-decoration: none;
+  padding: 0.6rem 1.1rem;
+  border-radius: 7px;
+  font-weight: 500;
+  transition: background 0.22s, color 0.16s;
+}
+
+.nav-link:hover {
+  background: rgba(248,252,253,0.09);
+  color: #f6b4d8;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  padding: 4px;
+}
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  margin: 3.5px 0;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+.hamburger.active span:nth-child(1) {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+@media (max-width: 900px) {
+  .nav-menu {
+    position: fixed;
+    left: -100vw;
+    top: 64px;
+    flex-direction: column;
+    background: linear-gradient(90deg, #43cea2 0%, #185a9d 100%);
+    width: 100vw;
+    border-radius: 0 0 16px 16px;
+    text-align: center;
+    transition: left 0.3s;
+    box-shadow: 0 10px 27px rgba(0,0,0,0.10);
+    padding: 2rem 0;
+    gap: 0;
+    z-index: 1005;
+  }
+  .nav-menu.active {
+    left: 0;
+  }
+  .nav-link {
+    display: block;
+    padding: 1rem 0;
+    margin: 0.5rem 0;
+  }
+  .hamburger {
+    display: flex;
+  }
+}

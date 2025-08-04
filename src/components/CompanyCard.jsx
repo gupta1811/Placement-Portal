@@ -5,7 +5,7 @@ const CompanyCard = ({ company }) => {
   return (
     <div className="company-card card">
       <div className="company-header">
-        <img src={company.logo} alt={`${company.name} logo`} className="company-logo" />
+        <img clas src={company.logo} alt={`${company.name} logo`} className="company-logo" />
         <div className="company-info">
           <h3 className="company-name">{company.name}</h3>
           <p className="company-package">{company.package}</p>

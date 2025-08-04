@@ -1,8 +1,13 @@
+import googleLogo from '../assets/logo/google.jpeg';
+import amazonLogo from '../assets/logo/amazon.png';
+import microsoftLogo from '../assets/logo/microsoft.png';
+import infosysLogo from '../assets/logo/infosys.jpeg';
+
 export const companies = [
   {
     id: 1,
     name: "Google",
-    logo: "public/src/asset/logo/amazon.png",
+    logo: googleLogo,
     description: "Leading technology company specializing in Internet-related services and products.",
     package: "₹50-80 LPA",
     eligibility: "B.Tech/M.Tech - CSE, IT, ENC",
@@ -24,7 +29,7 @@ export const companies = [
   {
     id: 2,
     name: "Microsoft",
-    logo: "https://via.placeholder.com/100x100?text=Microsoft",
+    logo: microsoftLogo,
     description: "Multinational technology corporation that develops computer software, consumer electronics.",
     package: "₹45-75 LPA",
     eligibility: "B.Tech/M.Tech - CSE, IT, ENC",
@@ -46,7 +51,7 @@ export const companies = [
   {
     id: 3,
     name: "Amazon",
-    logo: "https://via.placeholder.com/100x100?text=Amazon",
+    logo: amazonLogo,
     description: "American multinational technology company focusing on e-commerce and cloud computing.",
     package: "₹40-70 LPA",
     eligibility: "B.Tech/M.Tech - CSE, IT, ECE",
@@ -69,7 +74,7 @@ export const companies = [
   {
     id: 4,
     name: "Infosys",
-    logo: "https://via.placeholder.com/100x100?text=Infosys",
+    logo: infosysLogo,
     description: "Indian multinational information technology company providing consulting and software services.",
     package: "₹8-12 LPA",
     eligibility: "B.Tech/B.E - All branches",

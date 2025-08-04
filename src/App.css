@@ -1,3 +1,10 @@
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 html, body, #root {
   height: 100%;
   width: 100%;
@@ -97,6 +104,7 @@ body {
 .hero-lead i {
   color: #43cea2;
   margin-right: 8px;
+  width: 100%;
 }
 
 /* 2. FLOATING STATS BOX: enough space to float, sits below hero text */
@@ -111,7 +119,7 @@ body {
   padding: 0% 40px;
   position: absolute;
   left: 50%;
-  bottom: -60px; /* Float below hero, not on text, matches padding-bottom */
+  bottom: -90px; /* Float below hero, not on text, matches padding-bottom */
   transform: translateX(-50%);
   z-index: 9;
   min-width: 340px;

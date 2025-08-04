@@ -8,7 +8,7 @@
 }
 
 .nav-container {
-  max-width: 1200px;
+  max-width: 100%;
   width: 100%;
   margin: 0 auto;
   padding: 8px 28px;
@@ -16,7 +16,6 @@
   justify-content: space-between;
   align-items: center;
   background: linear-gradient(90deg, #43cea2 0%, #185a9d 100%);
-  border-radius: 16px;
   box-shadow: 0 2px 24px rgba(80,120,180,0.09);
 }
 
@@ -113,3 +112,19 @@
     display: flex;
   }
 }
+
+.auth-buttons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.login-btn {
+  padding: 6px 12px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+

@@ -495,10 +495,44 @@ const AdminPanel = () => {
           margin-bottom: 30px;
         }
 
+
+
+        // .add-form {
+        //   margin-bottom: 30px;
+        //   border: 2px solid #3498db;
+        // }
+
+
+
         .add-form {
           margin-bottom: 30px;
           border: 2px solid #3498db;
+          background-color: #ffffff; /* white background */
+          color: #2c3e50; /* dark blue-gray text */
         }
+
+
+        .add-form h3 {
+          color: #2c3e50; /* heading ka color */
+        }
+
+        .add-form label {
+          color: #2c3e50; /* label ka color */
+        }
+
+        .add-form input,
+        .add-form textarea,
+        .add-form select {
+          background-color: #ffffff;
+          color: #2c3e50;
+          border: 1px solid #ccc;
+        }
+
+        .add-form input:focus,
+        .add-form textarea:focus {
+          border-color: #3498db;
+        }
+
 
         .add-form h3 {
           color: #2c3e50;

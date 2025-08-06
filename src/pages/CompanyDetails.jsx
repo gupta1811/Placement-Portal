@@ -38,7 +38,7 @@ const CompanyDetails = () => {
         </button>
 
         <div className="company-header">
-          <img src={company.logo} alt={`${company.name} logo`} className="company-logo" />
+          <img  src={company.logo} alt={`${company.name} logo`} className="company-logo" />
           <div className="company-info">
             <h1>{company.name}</h1>
             <p className="package">{company.package}</p>

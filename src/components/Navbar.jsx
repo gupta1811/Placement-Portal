@@ -1,11 +1,20 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import './Navbar.css';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import "./Navbar.css";
+import {
+  SignedIn,
+  SignedOut,
+  SignInButton,
+  UserButton,
+} from "@clerk/clerk-react";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const handleCloseMenu = () => setIsMenuOpen(false);
+  const handleCloseMenu = () => {
+    setIsMenuOpen(false);
+    window.scrollTo({ top: 0, behavior: "smooth" }); // Scroll to top on link click
+  };
 
   return (
     <nav className="navbar">
@@ -16,16 +25,32 @@ const Navbar = () => {
             Placement Portal
           </Link>
         </div>
-        <div className={`nav-menu ${isMenuOpen ? 'active' : ''}`}>
+        <div className={`nav-menu ${isMenuOpen ? "active" : ""}`}>
           <Link to="/" className="nav-link" onClick={handleCloseMenu}>
             Home
+          </Link>
+          <Link to="/dashboard" className="nav-link" onClick={handleCloseMenu}>
+            Dashboard
           </Link>
           <Link to="/admin" className="nav-link" onClick={handleCloseMenu}>
             Admin
           </Link>
+
+          <div className="auth-buttons">
+          <SignedOut>
+            <SignInButton mode="modal">
+              <button className="login-btn">Login</button>
+            </SignInButton>
+          </SignedOut>
+
+          <SignedIn>
+            <UserButton afterSignOutUrl="/" />
+          </SignedIn>
         </div>
+        </div>
+
         <div
-          className={`hamburger${isMenuOpen ? ' active' : ''}`}
+          className={`hamburger${isMenuOpen ? " active" : ""}`}
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           aria-label="Toggle navigation"
           role="button"
